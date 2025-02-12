@@ -1,35 +1,40 @@
 // import campañas from '../assets/campañas-icon.png'
-import { MdOutlineCampaign } from "react-icons/md";
+import { RiDashboardFill } from "react-icons/ri";
+import { FaBoxesStacked } from "react-icons/fa6";
+import { FaBoxOpen } from "react-icons/fa6";
+import { FaHouseChimney } from "react-icons/fa6";
+import { FaFileExcel } from "react-icons/fa6";
+import DashboardLayout from "../layouts/DashboardLayout";
 
 export const homeChildrenRoutes = [
     {
+        path: '/',
+        navItemName: 'General',
+        icon: <RiDashboardFill />,
+        element: <DashboardLayout />,
+    },
+    {
         path: 'campañas',
         navItemName: 'Campañas',
-        icon: <MdOutlineCampaign />,
+        icon: <FaBoxesStacked />,
         element: '',
     },
     {
         path: 'entregas',
         navItemName: 'Entregas',
-        icon: <MdOutlineCampaign />,
+        icon: <FaBoxOpen />,
         element: <p className='text-black/90'>Entregas</p>,
     },
     {
         path: 'rsh',
         navItemName: 'RSH',
-        icon: <MdOutlineCampaign />,
-        element: '',
-    },
-    {
-        path: 'folios',
-        navItemName: 'Folios',
-        icon: <MdOutlineCampaign />,
+        icon: <FaHouseChimney />,
         element: '',
     },
     {
         path: 'transacciones',
         navItemName: 'Transacciones',
-        icon: <MdOutlineCampaign />,
+        icon: <FaFileExcel />,
         element: '',
     },
 ]
